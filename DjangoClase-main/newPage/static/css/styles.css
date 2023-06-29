@@ -8,7 +8,7 @@
 }
 
 body{
-    background-color: #4e1b32;
+    background-color: #ffffff;
     color: #ffffff;
     font-size: 20px;
     text-align: center;
@@ -39,7 +39,7 @@ body{
     width: 33,3%;
     height: 80%;
     float: left;
-    background-color: #4e1b32;
+    background-color: #ffffff;
     color: rgb(247, 236, 236);
     margin: auto;
 }
@@ -47,7 +47,7 @@ body{
     width: 33,3%;
     height: 80%;
     float: left;
-    background-color: #4e1b32;
+    background-color: #ffffff;
     color: white;
     margin: auto;
 }
@@ -55,7 +55,7 @@ body{
     width: 33,3%;
     height: 80%;
     float: left;
-    background-color: #4e1b32;
+    background-color: #ffffff;
     color: white;
     margin: auto;
 }
@@ -216,6 +216,7 @@ a{
 
 .container3 {
     margin: auto;
+    color: #000;
 }
 
 p2 {
