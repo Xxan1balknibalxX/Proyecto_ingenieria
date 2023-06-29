@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    {% load bootstrap5 %} {% bootstrap_css%} {% bootstrap_javascript%} {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{%url 'home'%}"
+          ><img src="{% static  'img/img/logo3.jpg' %}" alt="" width="120px" height="80px"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{%url 'home'%}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{%url 'catalogo'%}">Catálogo</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Tu Perfil
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{%url 'inicio_sesion'%}">Iniciar Sesion</a></li>
+                <li><a class="dropdown-item" href="{%url 'creacion_user'%}">Crear Cuenta</a></li>
+                <li><a class="dropdown-item" href="{%url 'tokens'%}">Tokens</a></li>
+                <li><a class="dropdown-item" href="{%url 'seguridad'%}">Seguridad de Usuario</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{%url 'contacto'%}">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <br/>
+    <div class="container2">
+      <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{%static 'img/img/Elden Ring.jpg'%}" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="{%static 'img/img/img_home/FORZA.jpg'%}" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="{%static 'img/img/img_home/GOW.jpg'%}" class="d-block w-100" alt="..." />
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <br />
+    <h1>Bienvenidos a ADN-Gaming</h1>
+    <!-- Contenedor iamgenes home-->
+    <div class="container_home">
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+          <div class="card">
+            <a href="{%url 'home'%}"><img src="{%static 'img/img/logo3.jpg'%}" class="img-thumbnail w-100% m-auto" alt="..." /></a>
+            <div class="card-body">
+              <h5 class="card-title"></h5>
+              <p class="card-text">Conoce ADN-Gaming</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <a href="{%url 'catalogo'%}"
+              ><img src="{%static 'img/img/img_home/juegosVEND.jpg'%}" class="img-thumbnail w-100 m-auto" alt="..."
+            /></a>
+            <div class="card-body">
+              <h5 class="card-title">Lo mas Vendido</h5>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <a href="{%url 're4'%}">
+            <img src="{%static 'img/img/img_home/juegosoferta.jpg'%}" class="img-thumbnail w-100 m-auto" alt="..."/></a>
+            <div class="card-body">
+              <h5 class="card-title">Ofertas Especiales</h5>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img
+              href="..."
+              src="{%static 'img/img/img_home/lanzamientos.jpg'%}"
+              class="img-thumbnail w-100 m-auto"
+              alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Proximamente disponibles</h5>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img
+              href="contacto.html"
+              src="{%static 'img/img/img_home/bannerRRSS.jpg'%}"
+              class="img-thumbnail w-100 m-auto"
+              alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Nuestras redes sociales</h5>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <a href="{%url 'tokens'%}">
+            <img src="{%static 'img/img/img_home/token1.jpg.webp'%}" class="img-thumbnail w-100 m-auto" alt="..."/></a>
+            <div class="card-body">
+              <h5 class="card-title">Sistema de Tokens</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <center>
+    <div class="contenedor4">
+      <a href="{%url 'catalogo'%}">
+        <img id="img_cont4_l" src="{%static 'img/img/si.png'%}" alt="" />
+      </a>
+      <a href="{%url 'catalogo'%}">
+        <img id="img_cont4_r" src="{%static 'img/img/img_home/banner_cont4_R.jpg'%}" alt="" />
+      </a>
+    </div>
+    </center>
+  </body>
+</html>

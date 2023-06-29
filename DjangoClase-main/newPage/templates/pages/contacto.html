@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    {% load bootstrap5 %} {% bootstrap_css%} {% bootstrap_javascript%} {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{%url 'home'%}"
+          ><img src="{% static  'img/img/logo3.jpg' %}" alt="" width="120px" height="80px"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{%url 'home'%}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{%url 'catalogo'%}">Catálogo</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Tu Perfil
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{%url 'inicio_sesion'%}">Iniciar Sesion</a></li>
+                <li><a class="dropdown-item" href="{%url 'creacion_user'%}">Crear Cuenta</a></li>
+                <li><a class="dropdown-item" href="{%url 'tokens'%}">Tokens</a></li>
+                <li><a class="dropdown-item" href="{%url 'seguridad'%}">Seguridad de Usuario</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{%url 'contacto'%}">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <h1>Contáctanos</h1>
+    <div class='col-lg-6 text-center mx-auto fw-bolder p-5'>
+      <form>
+        <label for="nombre">Nombre:</label>
+        <input class="col-md-6" type="text" id="nombre" name="nombre" onblur="validarcampon(this)" />
+        <span id="mensaje-error" style="color: red"></span>
+        <br /><br />
+
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" onblur="validarcampoc(this)" />
+        <span id="mensaje-erroe" style="color: red"></span>
+        <br /><br />
+        <label for="mensaje">Mensaje:</label><br />
+        <textarea id="mensaje" name="mensaje"></textarea><br />
+        <br />
+        <label for="tipo">Tipo de consulta:</label>
+        <select id="tipo" name="tipo">
+          <option value="soporte">Soporte técnico</option>
+          <option value="pregunta">Preguntas generales</option></select
+        ><br />
+
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <ul>
+      <li>Dirección: 666 Street Fighter, Viña del mar, Narnia</li>
+      <li>Correo electrónico: contacto@ADN-GAMES.com</li>
+      <li>Teléfono: +56 2 2953 1218</li>
+    </ul>
+    <footer>
+      <p>&copy; 2023 ADN-Game. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+      function validarcampon(campo) {
+        if (campo.value == "") {
+          document.getElementById("mensaje-error").innerHTML = "Por favor, complete este campo.";
+        } else {
+          document.getElementById("mensaje-error").innerHTML = "";
+        }
+      }
+      function validarcampoc(campo) {
+        if (campo.value == "") {
+          document.getElementById("mensaje-erroe").innerHTML = "Por favor, complete este campo.";
+        } else {
+          document.getElementById("mensaje-erroe").innerHTML = ":D";
+        }
+      }
+    </script>
+  </body>
+</html>

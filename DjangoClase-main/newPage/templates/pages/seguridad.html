@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    {% load bootstrap5 %} {% bootstrap_css%} {% bootstrap_javascript%} {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{%url 'home'%}"
+          ><img src="{% static  'img/img/logo3.jpg' %}" alt="" width="120px" height="80px"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{%url 'home'%}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{%url 'catalogo'%}">Catálogo</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Tu Perfil
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{%url 'inicio_sesion'%}">Iniciar Sesion</a></li>
+                <li><a class="dropdown-item" href="{%url 'creacion_user'%}">Crear Cuenta</a></li>
+                <li><a class="dropdown-item" href="{%url 'tokens'%}">Tokens</a></li>
+                <li><a class="dropdown-item" href="{%url 'seguridad'%}">Seguridad de Usuario</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{%url 'contacto'%}">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+      <center>
+      <div class ="contenedor1">
+        <h2>Ajuste de usuarios
+        </h2><form></form>
+        <div class="row">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Nombre" aria-label="First name" id="nombre" name="nombre">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Apellido" aria-label="Last name" id="apellido" name="apellido">
+            </div>
+          </div><br>
+          <div class="col-12">
+            <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+            <select id="paises-select"></select>
+          <!--   <select class="form-select" id="opciones-select" >
+              <option selected>Pais</option>
+              <option value="1">chile</option>
+              <option value="2">chile premiun</option>
+              <option value="3">chile comunista</option>
+            </select> -->
+          </div>
+          <h2>---------------------------------------------</h2>
+          <br><h1>Notificaciones</h1>
+          
+         <div class="form-check form-switch form-check-reverse">
+          <input class="form-check-input" type="checkbox" id="flexSwitchCheckReverse">
+          <label class="form-check-label" for="flexSwitchCheckReverse">Notificaciones diarias </label>
+          </div>
+                    
+          <div class="form-check form-switch form-check-reverse">
+            <input class="form-check-input" type="checkbox" id="flexSwitchCheckReverse">
+            <label class="form-check-label" for="flexSwitchCheckReverse">Notificacion de afertas</label>
+          </div>            
+          <div class="form-check form-switch form-check-reverse">
+            <input class="form-check-input" type="checkbox" id="flexSwitchCheckReverse">
+            <label class="form-check-label" for="flexSwitchCheckReverse">Uso automatico de la tarjeta</label>
+          </div><br><h2>---------------------------------------------</h2> <br>
+          <button type="submit" class="btn btn-primary">Guardar</button>
+          <button type="submit" class="btn btn-secondary">Cancelar</button><br><br>
+        </form>
+          <h1>Cerrar cuenta</h1>
+          <button type="button" class="btn btn-danger">Borrar cuenta</button>
+
+          
+      <!--final del contenedor 1  -->
+      </div>
+      <div class="contenedor2">
+        <h2>Sistema de arriendo </h2>
+         <!-- <h6 class="textoparrafo">Nuestro sistema de arriendo de videojuegos se basa es un sistema de tokens. Los tokens son comprados directamente en la pagina o obtenidos por promociones o ofertas por tiempo de coneccion en la pagina, ademas, por cada 10000clp gastados en juegos o servicios de la pagina se sumaran 10 tokens a tu contador.
+            Puedes jugar cualquier juego de nuestro catalogo en un free trial con nuestro sistema de token, teniendo un costo de  5 token la hora d ejuego en cualquier juego de nuestro catalogo.
+            La devolucion o reembolso de un juego comprado restara el mismo saldo de token agregado por este al momento de su adquisicion </h6> -->
+         
+         <h2>---------------------------------------------</h2>
+          <label for="customRange1" class="form-label">Restricciones de Seguridad</label>
+            <input type="range" class="form-range" id="customRange1">
+          <h1>Confirmar compra</h1>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+            <label class="form-check-label" for="exampleRadios1">
+              Confirmar compra de arriendo con sms
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+            <label class="form-check-label" for="exampleRadios1">
+              Confirmar compra con correo
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+            <label class="form-check-label" for="exampleRadios1">
+             confirmar compra Whatsapp
+            </label>
+          </div>
+
+<!-- fibnal de contenedor 2 -->
+      </div>
+      
+        <div class="contenedor3">
+          <h1>Cartera</h1><br>
+          <h3>Actualizacion de la forma de pago </h3>
+          <h2>---------------------------------------------</h2>
+          <h1>Tarjeta de Credito</h1>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Numerod de tajeta" aria-label="First name">
+          </div>
+          <div class="col-md-6">
+            <label for="inputCity" class="form-label">Fecha de experacion</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+          
+          <div class="col-md-6">
+            <label for="inputZip" class="form-label">CVC</label>
+            <input type="text" class="form-control" id="inputZip">
+          </div>
+          <button type="button" class="btn btn-primary">Actualizar tarjeta</button>
+        <br><h2>---------------------------------------------</h2>
+        <h1>Productos arrendados:</h1>
+        <button type="button" class="btn btn-outline-primary" disabled>CS-GO</button>
+        <button type="button" class="btn btn-danger">Danger</button><br>
+        <button type="button" class="btn btn-outline-primary" disabled>Resident evil</button>
+          <button type="button" class="btn btn-danger">Danger</button><br>
+          <button type="button" class="btn btn-outline-primary" disabled>Tu mama es wena pal loly</button>
+          <button type="button" class="btn btn-danger">Danger</button><br>
+          
+
+
+          <!-- final del contenedor 3 -->
+        </div>
+    </center>
+
+    <script>
+      const select = document.getElementById("paises-select");
+
+fetch('https://restcountries.com/v3.1/all')
+  .then(response => response.json())
+  .then(data => {
+    data.forEach(pais => {
+      const optionElement = document.createElement("option");
+      optionElement.value = pais.name.common;
+      optionElement.textContent = pais.name.common;
+      select.appendChild(optionElement);
+    });
+  })
+  .catch(error => {
+    console.error('Error al obtener países desde la API:', error);
+  });
+    </script>
+</body>
+</html>
