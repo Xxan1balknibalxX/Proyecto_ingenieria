@@ -1,10 +1,10 @@
 .navbar {
-  background-color: #fff;
-  text-emphasis-color: #000;
+  background-color: #000;
+  text-emphasis-color: #fff;
 }
 
 .navbar a.nav-link {
-  color: #000; /* Color de texto negro */
+  color: #fff; /* Color de texto negro */
 }
 
 body{
