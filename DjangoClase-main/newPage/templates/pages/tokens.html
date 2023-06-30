@@ -59,19 +59,44 @@
     </nav>
     <br />
      <center>
-      <div class="containerTokens">
-        <div class="row">
-          <div class="col-12">
-            <img src="{%static 'img/img/token.gif'%}" width="300" height="350" class="img-thumbnail m-auto" />
-          </div>
-        </div>
-      </div>
-
-      <div class="Tokeninfo">
-        <h3>Lo sentimos :C</h3>
-        <p>
-          El servicio de tokens aun no esta disponible estamos trabajando para poder implementarlo
-        </p>
+      <div class="container_login">
+        <div class='row'>
+          <div class='col-lg-6 text-center mx-auto fw-bolder p-5'>
+            <h2>Ingrese su Informacion <h2/>    
+              <center>
+                <form action="{% url 'tokens' %}" method="POST">
+                  {% csrf_token %}                  
+                  <div>
+                      <label for="Rut" class="form-label col-md-6">Rut</label>
+                      <input type="text" name="Rut" id="Rut" class="form-control">
+                  </div>
+                  <div>
+                      <label for="nombre" class="form-label col-md-6">Nombre</label>
+                      <input type="text" name="nombre" id="nombre" class="form-control">
+                  </div>
+                  <div>
+                      <label for="apellido" class="form-label col-md-6">Apellido</label>
+                      <input type="text" name="apellido" id="apellido" class="form-control">
+                  </div>
+                  <div>
+                    <label for="mensaje" class="form-label col-md-6">Problema</label>
+                    <input type="text" id="mensaje" name="mensaje" class="form-control"></input>
+                  </div>
+                  <div>
+                      <label for="telefono" class="form-label col-md-6">Telefono</label>
+                      <input type="text" name="telefono" id="telefono" class="form-control">
+                  </div>
+                  <div>
+                      <label for="correo" class="form-label col-md-6">Correo</label>
+                      <input type="email" name="correo" id="correo" class="form-control">
+                  </div>
+                  <br><br>
+                  <input type="submit" name="opcion" value="Agregar" class="btn btn-success">
+                  <a href=""><button type="button" class="btn btn-secondary">Volver</button></a>
+              </form>
+              </center>
+          <div/>
+        <div/>
       </div>
      </center> 
   </body>

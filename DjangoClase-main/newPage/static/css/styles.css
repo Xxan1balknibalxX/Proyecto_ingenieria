@@ -255,9 +255,7 @@ p2 {
     ;
 }
 .container_home{
-    margin-left: 15%;
-    margin-right: 5%;;
-    padding: 0;
+    margin: auto;
     
 }
 .DescripcionRe4 {
@@ -488,6 +486,6 @@ form {
 
 .contenedor4{
   margin: center;
-  width: 25%;
+  width: 50%;
   height: 25%;
 }
