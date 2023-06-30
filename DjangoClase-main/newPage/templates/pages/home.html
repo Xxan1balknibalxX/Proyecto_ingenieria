@@ -82,31 +82,30 @@
     <h1>Bienvenidos a ADN-Gaming</h1>
     <!-- Contenedor iamgenes home-->
     <div class="container_home">
-      <div class="row row-cols-1 row-cols-md-2 g-4">
+      <div class="row col-1 col-md-12 justify-content-center">
         <div class="col">
           <div class="card">
-            <a href="{%url 'home'%}"><img src="{%static 'img/img/logo3.jpg'%}" class="img-thumbnail w-100% m-auto" alt="..." /></a>
+            <a href="{% url 'contacto' %}"><img src="{% static 'img/LogoN.png' %}" class="img-thumbnail w-auto m-auto" alt="..." /></a>
             <div class="card-body">
               <h5 class="card-title"></h5>
-              <p class="card-text">Conoce ADN-Gaming</p>
+              <p class="card-text">Contactanos</p>
             </div>
           </div>
         </div>
         <div class="col">
           <div class="card">
-            <a href="{%url 'catalogo'%}"
-              ><img src="{%static 'img/img/img_home/juegosVEND.jpg'%}" class="img-thumbnail w-100 m-auto" alt="..."
-            /></a>
+            <a href="{% url 'catalogo' %}"><img src="{% static 'img/img/img_home/juegosVEND.jpg' %}" class="img-thumbnail w-100 m-auto" alt="..." /></a>
             <div class="card-body">
-              <h5 class="card-title">Lo mas Vendido</h5>
+              <h5 class="card-title">Lo más Vendido</h5>
               <p class="card-text"></p>
             </div>
           </div>
         </div>
         <div class="col">
           <div class="card">
-            <a href="{%url 're4'%}">
-            <img src="{%static 'img/img/img_home/juegosoferta.jpg'%}" class="img-thumbnail w-100 m-auto" alt="..."/></a>
+            <a href="{% url 're4' %}">
+              <img src="{% static 'img/img/img_home/juegosoferta.jpg' %}" class="img-thumbnail w-100 m-auto" alt="..." />
+            </a>
             <div class="card-body">
               <h5 class="card-title">Ofertas Especiales</h5>
               <p class="card-text"></p>
@@ -115,36 +114,10 @@
         </div>
         <div class="col">
           <div class="card">
-            <img
-              href="..."
-              src="{%static 'img/img/img_home/lanzamientos.jpg'%}"
-              class="img-thumbnail w-100 m-auto"
-              alt="..." />
+            <img href="..." src="{% static 'img/img/img_home/lanzamientos.jpg' %}" class="img-thumbnail w-100 m-auto" alt="..." />
             <div class="card-body">
-              <h5 class="card-title">Proximamente disponibles</h5>
+              <h5 class="card-title">Próximamente disponibles</h5>
               <p class="card-text"></p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img
-              href="contacto.html"
-              src="{%static 'img/img/img_home/bannerRRSS.jpg'%}"
-              class="img-thumbnail w-100 m-auto"
-              alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Nuestras redes sociales</h5>
-              <p class="card-text"></p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <a href="{%url 'tokens'%}">
-            <img src="{%static 'img/img/img_home/token1.jpg.webp'%}" class="img-thumbnail w-100 m-auto" alt="..."/></a>
-            <div class="card-body">
-              <h5 class="card-title">Sistema de Tokens</h5>
             </div>
           </div>
         </div>
