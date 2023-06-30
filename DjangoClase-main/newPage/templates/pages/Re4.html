@@ -101,14 +101,33 @@
       </div>
     </div>
 
-    <div class="DescripcionRe4 col-2 col-md-9">
-      <h2>Descripcion</h2>
+    <div class="DescripcionRe4 col-2 col-md-9 text-center">
+      <h2>Descripción</h2>
       <p>
-        Una rígida ruda con transmisión 1x10 y horquilla de 100mm, construida
-        para subir tu nivel y desarrollar tu pasión por los senderos. Diseñada
-        para las montañas, para cualquier cosa
+        Una rígida ruda con transmisión 1x10 y horquilla de 100mm, construida para subir tu nivel y desarrollar tu pasión por los senderos. Diseñada para las montañas, para cualquier cosa.
       </p>
-      
+      <button class="btn btn-primary mt-3" id="ver-mas" onclick="verMas()">Ver más</button>
+      <div class="collapse" id="expand-description">
+        <p>
+          Esta bicicleta está lista para enfrentar cualquier terreno y desafío que se presente. Con su transmisión de 1x10, tendrás un amplio rango de cambios para adaptarte a diferentes condiciones. La horquilla de 100mm te brinda la suspensión necesaria para absorber los impactos y mantener la tracción en los senderos más difíciles. No importa si eres un ciclista experimentado o estás empezando en el mundo del mountain bike, esta bicicleta te acompañará en todas tus aventuras.
+        </p>
+        <button class="btn btn-primary mt-3" id="ver-menos" onclick="verMenos()">Ver menos</button>
+      </div>
     </div>
+    
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script>
+      function verMas() {
+        document.getElementById("ver-mas").style.display = "none";
+        document.getElementById("expand-description").classList.add("show");
+        document.getElementById("ver-menos").style.display = "block";
+      }
+    
+      function verMenos() {
+        document.getElementById("ver-mas").style.display = "block";
+        document.getElementById("expand-description").classList.remove("show");
+        document.getElementById("ver-menos").style.display = "none";
+      }
+    </script>
   </body>
 </html>
