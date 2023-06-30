@@ -3,8 +3,14 @@
   text-emphasis-color: #fff;
 }
 
+.navbar-toggler {
+  background-color: white; /* Cambia el fondo del botón a blanco */
+  border-color: black; /* Hace el borde transparente */
+}
+
+
 .navbar a.nav-link {
-  color: #fff; /* Color de texto negro */
+  color: #fff; 
 }
 
 body{
