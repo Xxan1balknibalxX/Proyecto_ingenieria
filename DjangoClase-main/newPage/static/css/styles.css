@@ -46,7 +46,7 @@ body{
     height: 80%;
     float: left;
     background-color: #ffffff;
-    color: rgb(247, 236, 236);
+    color: black;
     margin: auto;
 }
 .contenedor2{
@@ -54,7 +54,7 @@ body{
     height: 80%;
     float: left;
     background-color: #ffffff;
-    color: white;
+    color: black;
     margin: auto;
 }
 .contenedor3{
