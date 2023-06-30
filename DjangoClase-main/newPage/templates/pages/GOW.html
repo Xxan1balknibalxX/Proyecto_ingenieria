@@ -104,48 +104,34 @@
       </div>
     </div>
 
-    <div class="DescripcionRe4 col-2 col-md-9  justify-content-between">
-      <h2>God of War</h2>
+    <div class="DescripcionRe4 col-2 col-md-9 text-center">
+      <h2>Descripción</h2>
       <p>
-        Kratos ha dejado atrás su venganza contra los dioses del Olimpo y vive ahora como un hombre en los dominios de
-        los dioses y monstruos nórdicos
+        Una rígida ruda con transmisión 1x10 y horquilla de 100mm, construida para subir tu nivel y desarrollar tu pasión por los senderos. Diseñada para las montañas, para cualquier cosa.
       </p>
-      <p>En este mundo cruel e implacable debe luchar para sobrevivir… y enseñar a su hijo a hacerlo también.</p>
-      <button
-        class="btn btn-primary mt-3"
-        data-bs-toggle="collapse"
-        data-bs-target="#more-info"
-        aria-expanded="false"
-        aria-controls="more-info">
-        Ver más
-      </button>
-      <div class="collapse  justify-content-between" id="more-info">
-        <h3>Características del juego God of War</h3>
-        <ul>
-          <li>
-            Gráficos alucinantes mejorados en PC. Disfruta de una auténtica resolución 4K en dispositivos compatibles,
-            [MU1] con frecuencias de fotogramas desbloqueadas para un rendimiento máximo. Modifica los ajustes con una
-            gran variedad de opciones y configuraciones gráficas, como el sombreado de mayor resolución, reflejos de
-            espacios en pantalla mejorados, la incorporación de GTAO y SSDO, y mucho más.
-          </li>
-          <li>
-            Conjunción de calidad y rendimiento. Aprovecha la potencia de la IA del supermuestreo de aprendizaje
-            profundo (DLSS) de NVIDIA para mejorar la frecuencia de fotogramas y generar imágenes nítidas llenas de
-            belleza en una selección de GPU de NVIDIA. Usa la tecnología NVIDIA Reflex de baja latencia para reaccionar
-            más rápidamente y asestar combos más fuertes con las mecánicas de respuesta que tanto ansías en las GPU de
-            GeForce.
-          </li>
-          <li>
-            Personalización de los controles Juega a tu manera. Gracias a la compatibilidad con los mandos inalámbricos
-            DUALSHOCK®4 y DUALSENSE®, una gran variedad de mandos diferentes y la plena capacidad de personalizar las
-            asignaciones para teclado y ratón, podrás modificar cada acción según tu estilo de juego.
-          </li>
-        </ul>
+      <button class="btn btn-primary mt-3 mx-auto" id="ver-mas" onclick="verMas()">Ver más</button>
+      <div class="collapse" id="expand-description">
         <p>
-          En esta nueva entrega Kratos es acompañado por su hijo Atreus, a quien deberá enseñar a sobrevivir en los 9
-          mundos de la cosmología nórdica antigua y será su acompañante y enfoque principal durante toda la aventura.
+          Esta bicicleta está lista para enfrentar cualquier terreno y desafío que se presente. Con su transmisión de 1x10, tendrás un amplio rango de cambios para adaptarte a diferentes condiciones. La horquilla de 100mm te brinda la suspensión necesaria para absorber los impactos y mantener la tracción en los senderos más difíciles. No importa si eres un ciclista experimentado o estás empezando en el mundo del mountain bike, esta bicicleta te acompañará en todas tus aventuras.
         </p>
+        <button class="btn btn-primary mt-3 mx-auto" id="ver-menos" onclick="verMenos()">Ver menos</button>
       </div>
     </div>
+    
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script>
+      function verMas() {
+        document.getElementById("ver-mas").style.display = "none";
+        document.getElementById("expand-description").classList.add("show");
+        document.getElementById("ver-menos").style.display = "block";
+      }
+    
+      function verMenos() {
+        document.getElementById("ver-menos").style.display = "none";
+        document.getElementById("ver-mas").style.display = "block";
+        document.getElementById("expand-description").classList.remove("show");
+      }
+    </script>
+  </body>
   </body>
 </html>

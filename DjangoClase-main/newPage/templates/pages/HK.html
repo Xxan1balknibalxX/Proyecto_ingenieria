@@ -110,59 +110,34 @@
       </div>
     </div>
 
-    <!-- cambiar la descricion del juego xdxdxdx -->
-    <div class="DescripcionRe4 col-2 col-md-9">
-      <h2>Hollow Knight</h2>
+    <div class="DescripcionRe4 col-2 col-md-9 text-center">
+      <h2>Descripción</h2>
       <p>
-        Hollow Knight es una aventura de acción clásica en 2D ambientada en un vasto mundo interconectado. Explora
-        cavernas tortuosas, ciudades antiguas y páramos mortales. Combate contra criaturas corrompidas, haz nuevas
-        amistades con extraños insectos y resuelve los antiguos misterios que yacen en el corazón del reino..
+        Una rígida ruda con transmisión 1x10 y horquilla de 100mm, construida para subir tu nivel y desarrollar tu pasión por los senderos. Diseñada para las montañas, para cualquier cosa.
       </p>
-      <button
-        class="btn btn-primary mt-3"
-        data-bs-toggle="collapse"
-        data-bs-target="#more-info"
-        aria-expanded="false"
-        aria-controls="more-info">
-        Ver más
-      </button>
-      <div class="collapse" id="more-info">
-        <h3>Características del juego Resident Evil 4</h3>
-        <ul>
-          <li>
-            Hollow Knight se enfoca principalmente en exploración, plataformas y combate. Los jugadores exploran un gran
-            mundo interconectado usando una variedad de movimientos y técnicas de combate.
-          </li>
-          <li>
-            En los distintos escenarios se pueden encontrar detalles que relatan la historia de Hallownest, tales como
-            piedras con escritos, objetos particulares, etc. Al estilo clásico de los metroidvania, existen áreas del
-            mundo a las que los jugadores no pueden acceder hasta que hayan obtenido algún objeto o habilidad particular
-          </li>
-          <li>
-            El guardado del juego sólo puede hacerse en los bancos para descansar que se encuentran esparcidos por todo
-            el reino. Al sentarse en un banco, el mapa se actualizará con las zonas recientemente descubiertas por el
-            Caballero, a su vez que regenera su salud en caso de que la haya perdido.
-          </li>
-        </ul>
+      <button class="btn btn-primary mt-3 mx-auto" id="ver-mas" onclick="verMas()">Ver más</button>
+      <div class="collapse" id="expand-description">
         <p>
-          Es sorprendente el trabajo que se dieron las tres personas encargadas de hacer tamaño título, pero ¿De qué
-          exactamente hablamos? Hollow Knight es un juego estilo “Metroidvania” con un estilo de arte muy parecido al
-          trabajo de Tim Burton, el cual consta de recorrer pasillos inundados de enemigos, obstáculos, jefes, saltos
-          imposibles, power ups, etc.; en un mundo oscuro, tenebroso, con más de 140 tipos de enemigos que lo único que
-          quieren es aniquilarte. Hollow Knight se convierte en un verdadero desafío, mientras más avanzas por el juego,
-          pero ¿Es tan mala la oscuridad?
+          Esta bicicleta está lista para enfrentar cualquier terreno y desafío que se presente. Con su transmisión de 1x10, tendrás un amplio rango de cambios para adaptarte a diferentes condiciones. La horquilla de 100mm te brinda la suspensión necesaria para absorber los impactos y mantener la tracción en los senderos más difíciles. No importa si eres un ciclista experimentado o estás empezando en el mundo del mountain bike, esta bicicleta te acompañará en todas tus aventuras.
         </p>
-        
-        <h3>Mas Acerca de Hollow Knight</h3>
-        <p>
-          Un mundo sugerente hecho a mano El mundo de Hollow Knight cobra vida gracias a sus detalles vívidos y
-          melancólicos, sus cavernas con criaturas extrañas y terroríficas, y su animación a mano con un estilo
-          tradicional en 2D. Cada nueva zona que descubras es única, hermosa y extraña, con cantidad de criaturas y
-          personajes nuevos. Disfruta de las vistas y descubre nuevas maravillas ocultas fuera de los caminos
-          habituales. Si te gusta la jugabilidad clásica, los personajes adorables a la vez que extraños, las aventuras
-          épicas y los mundos bellos y de estilo gótico, ¡entonces Hollow Knight te espera!
-        </p>
+        <button class="btn btn-primary mt-3 mx-auto" id="ver-menos" onclick="verMenos()">Ver menos</button>
       </div>
     </div>
+    
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script>
+      function verMas() {
+        document.getElementById("ver-mas").style.display = "none";
+        document.getElementById("expand-description").classList.add("show");
+        document.getElementById("ver-menos").style.display = "block";
+      }
+    
+      function verMenos() {
+        document.getElementById("ver-menos").style.display = "none";
+        document.getElementById("ver-mas").style.display = "block";
+        document.getElementById("expand-description").classList.remove("show");
+      }
+    </script>
+  </body>
   </body>
 </html>

@@ -105,46 +105,34 @@
       </div>
     </div>
 
-    <div class="DescripcionRe4 col-2 col-md-9">
-      <h2>Forza Horizon 5</h2>
+    <div class="DescripcionRe4 col-2 col-md-9 text-center">
+      <h2>Descripción</h2>
       <p>
-        Explora los vibrantes paisajes del mundo abierto de México y disfruta de una diversión sin límites al volante de
-        los mejores coches del mundo.
+        Una rígida ruda con transmisión 1x10 y horquilla de 100mm, construida para subir tu nivel y desarrollar tu pasión por los senderos. Diseñada para las montañas, para cualquier cosa.
       </p>
-      <button
-        class="btn btn-primary mt-3"
-        data-bs-toggle="collapse"
-        data-bs-target="#more-info"
-        aria-expanded="false"
-        aria-controls="more-info">
-        Ver más
-      </button>
-      <div class="collapse" id="more-info">
-        <h3>Características del juego Forza Horizon 5</h3>
-        <ul>
-          <li>
-            Este es un mundo abierto diverso Explora un mundo de llamativo contraste y belleza. Descubre desiertos
-            vivos, exuberantes selvas, ciudades históricas, ruinas escondidas, playas inmaculadas, vastos cañones y un
-            imponente volcán nevado.
-          </li>
-          <li>
-            Lidera impresionantes expediciones a través de los paisajes dinámicos y en constante evolución del mundo
-            abierto de México con una acción de conducción ilimitada y divertida en cientos de los mejores coches del
-            mundo.
-          </li>
-          <li>
-            Forma equipos con otros jugadores y participa en Horizon Arcade para disfrutar de una serie continuada de
-            desafíos divertidos y exagerados que os mantendrán en la acción y os entretendrán sin menús, pantallas de
-            carga ni salas de espera. Conoce nuevos amigos en Horizon Open y Tours, y comparte tus creaciones con nuevos
-            intercambios de regalos entre miembros de la comunidad.
-          </li>
-        </ul>
+      <button class="btn btn-primary mt-3 mx-auto" id="ver-mas" onclick="verMas()">Ver más</button>
+      <div class="collapse" id="expand-description">
         <p>
-          ¡Tu aventura definitiva en Horizon te espera! Explora paisajes dinámicos y en constante evolución del mundo
-          abierto de México con una acción de conducción ilimitada y divertida en cientos de los mejores coches del
-          mundo.
+          Esta bicicleta está lista para enfrentar cualquier terreno y desafío que se presente. Con su transmisión de 1x10, tendrás un amplio rango de cambios para adaptarte a diferentes condiciones. La horquilla de 100mm te brinda la suspensión necesaria para absorber los impactos y mantener la tracción en los senderos más difíciles. No importa si eres un ciclista experimentado o estás empezando en el mundo del mountain bike, esta bicicleta te acompañará en todas tus aventuras.
         </p>
+        <button class="btn btn-primary mt-3 mx-auto" id="ver-menos" onclick="verMenos()">Ver menos</button>
       </div>
     </div>
+    
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script>
+      function verMas() {
+        document.getElementById("ver-mas").style.display = "none";
+        document.getElementById("expand-description").classList.add("show");
+        document.getElementById("ver-menos").style.display = "block";
+      }
+    
+      function verMenos() {
+        document.getElementById("ver-menos").style.display = "none";
+        document.getElementById("ver-mas").style.display = "block";
+        document.getElementById("expand-description").classList.remove("show");
+      }
+    </script>
+  </body>
   </body>
 </html>

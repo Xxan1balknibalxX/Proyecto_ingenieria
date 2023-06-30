@@ -106,47 +106,35 @@
       </div>
     </div>
 
-    <div class="DescripcionRe4 col-2 col-md-9">
-      <h2>Katana Zero</h2>
+    <div class="DescripcionRe4 col-2 col-md-9 text-center">
+      <h2>Descripción</h2>
       <p>
-        Usa tu espada, corre y manipula el tiempo para desvelar tu pasado en un despliegue acrobático brutalmente
-        estético.
+        Una rígida ruda con transmisión 1x10 y horquilla de 100mm, construida para subir tu nivel y desarrollar tu pasión por los senderos. Diseñada para las montañas, para cualquier cosa.
       </p>
-      <button
-        class="btn btn-primary mt-3"
-        data-bs-toggle="collapse"
-        data-bs-target="#more-info"
-        aria-expanded="false"
-        aria-controls="more-info">
-        Ver más
-      </button>
-      <div class="collapse" id="more-info">
-        <h3>Características del juego Katana Zero</h3>
-        <ul>
-          <li>
-            Secuencias creadas a mano: Cada nivel ha sido diseñado de manera única para poder completarlo de incontables
-            formas. Derrota a tus adversarios con creatividad, usando enfoques espontáneos para eliminar a cada cual
-            como creas conveniente.
-          </li>
-          <li>
-            Narración totalmente original: Una enigmática historia contada a través de secuencias cinemáticas
-            entretejidas en el juego, creando todo tipo de giros hasta llegar a la inesperada conclusión.
-          </li>
-          <li>
-            Combate excepcional: Supera a tus rivales según exija la situación. Desvía las balas para devolvérselas a
-            tus enemigos, esquiva los ataques que recibas y manipula a tus contrincantes y los entornos con trampas y
-            explosivos. No dejes supervivientes.
-          </li>
-        </ul>
+      <button class="btn btn-primary mt-3 mx-auto" id="ver-mas" onclick="verMas()">Ver más</button>
+      <div class="collapse" id="expand-description">
         <p>
-          Katana Zero es un juego de acción en dos dimensiones en el que controlamos a un samurái en una época actual.
-          Eso quiere decir que todos los enemigos a los que nos enfrentaremos tienen armas del siglo XXI, incluyendo
-          pistolas, escudos antidisturbios y alguna que otra más. Las razones por las que nos encontramos en esta
-          situación se van desvelando poco a poco, y nos ha sorprendido la carga narrativa que encontramos en este
-          título.
+          Esta bicicleta está lista para enfrentar cualquier terreno y desafío que se presente. Con su transmisión de 1x10, tendrás un amplio rango de cambios para adaptarte a diferentes condiciones. La horquilla de 100mm te brinda la suspensión necesaria para absorber los impactos y mantener la tracción en los senderos más difíciles. No importa si eres un ciclista experimentado o estás empezando en el mundo del mountain bike, esta bicicleta te acompañará en todas tus aventuras.
         </p>
+        <button class="btn btn-primary mt-3 mx-auto" id="ver-menos" onclick="verMenos()">Ver menos</button>
       </div>
     </div>
+    
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script>
+      function verMas() {
+        document.getElementById("ver-mas").style.display = "none";
+        document.getElementById("expand-description").classList.add("show");
+        document.getElementById("ver-menos").style.display = "block";
+      }
+    
+      function verMenos() {
+        document.getElementById("ver-menos").style.display = "none";
+        document.getElementById("ver-mas").style.display = "block";
+        document.getElementById("expand-description").classList.remove("show");
+      }
+    </script>
+  </body>
 
 
   </body>
