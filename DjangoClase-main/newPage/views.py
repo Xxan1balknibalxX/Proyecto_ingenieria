@@ -12,9 +12,9 @@ def catalogo(request):
     context = {}
     return render(request, "pages/catalogo.html", context)
 
-def re4(request):
+def bici1(request):
     context = {}
-    return render(request, "pages/Re4.html", context)
+    return render(request, "pages/Bici1.html", context)
 
 def home(request):
     context = {}
@@ -28,25 +28,25 @@ def seguridad(request):
     context = {}
     return render(request, "pages/seguridad.html", context)
 
-def gow(request):
+def bici4(request):
     context = {}
-    return render(request, "pages/GOW.html", context)
+    return render(request, "pages/Bici4.html", context)
 
-def ktn(request):
+def bici3(request):
     context = {}
-    return render(request, "pages/KTN.html", context)
+    return render(request, "pages/Bici3.html", context)
 
-def fh5(request):
+def bici5(request):
     context = {}
-    return render(request, "pages/FH5.html", context)
+    return render(request, "pages/Bici5.html", context)
 
-def tokens(request):
+def arreglo(request):
     context = {}
-    return render(request, "pages/tokens.html", context)
+    return render(request, "pages/Arreglo.html", context)
 
-def hk(request):
+def bici2(request):
     context = {}
-    return render(request, "pages/hk.html", context)
+    return render(request, "pages/Bici2.html", context)
 
 def userAdd(request):
     if request.method == "POST":
